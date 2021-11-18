@@ -1,0 +1,211 @@
+var drawBitmojiHead = function(x,y,BitHeight) {
+stroke(0, 0, 0);
+fill(255, 219, 172);
+    rect(x+(BitHeight/100*39), y+(BitHeight/100*83), BitHeight/100*47, BitHeight/100*43);
+    ellipse(x+(BitHeight/100*63), y+(BitHeight/100*54), BitHeight/100*88,  BitHeight/100*80);    //head or face
+
+fill(0, 0, 0);  //hair
+    triangle(x+(BitHeight/100*35), y+(BitHeight/100*39), x+(BitHeight/100*61), y+(BitHeight/100*19),x+(BitHeight/100*34),y+(BitHeight/100*33));
+    triangle(x+(BitHeight/100*57), y+(BitHeight/100*41), x+(BitHeight/100*54), y+(BitHeight/100*32),x+(BitHeight/100*49),y+(BitHeight/100*33));
+    triangle(x+(BitHeight/100*70), y+(BitHeight/100*41), x+(BitHeight/100*70), y+(BitHeight/100*32),x+(BitHeight/100*58), y+(BitHeight/100*29));
+    triangle(x+(BitHeight/100*78), y+(BitHeight/100*40), x+(BitHeight/100*43), y+(BitHeight/100*17),x+(BitHeight/100*75), y+(BitHeight/100*33));
+    triangle(x+(BitHeight/100*110), y+(BitHeight/100*38), x+(BitHeight/100*82), y+(BitHeight/100*17),x+(BitHeight/100*75), y+(BitHeight/100*33));
+
+    fill(255, 255, 255);
+    rect(x+(BitHeight/100*37), y+(BitHeight/100*38), BitHeight/100*14, BitHeight/100*14);  //left glasses
+    rect(x+(BitHeight/100*70), y+(BitHeight/100*38), BitHeight/100*14, BitHeight/100*14);  //right glasses
+    stroke(0, 0, 0);
+    line(x+(BitHeight/100*70), y+(BitHeight/100*45), x+(BitHeight/100*51), y+(BitHeight/100*45)); //nose bridge
+
+fill(0, 0, 0);
+    ellipse(x+(BitHeight/100*44), y+(BitHeight/100*46), BitHeight/100*5, BitHeight/100*4); //left eye
+    ellipse(x+(BitHeight/100*77), y+(BitHeight/100*46), BitHeight/100*4, BitHeight/100*4); //right eye
+
+noStroke();
+fill(133, 112, 255);
+    arc(x+(BitHeight/100*30), y+(BitHeight/100*70), BitHeight/100*55, BitHeight/100*80, 63, 250); //left chisel
+    arc(x+(BitHeight/100*96), y+(BitHeight/100*70), BitHeight/100*62, BitHeight/100*80, 283, 473); //right chisel
+
+stroke(0, 0, 0);
+fill(255, 0, 0);
+    bezier(x+(BitHeight/100*61), y+(BitHeight/100*54), x+(BitHeight/100*59), y+(BitHeight/100*61), x+(BitHeight/100*53), y+(BitHeight/100*55), x+(BitHeight/100*60), y+(BitHeight/100*47));   //nose
+
+stroke(0, 0, 0);
+
+fill(255, 0, 0);
+    bezier(x+(BitHeight/100*72), y+(BitHeight/100*19), x+(BitHeight/100*-28), y+(BitHeight/100*69), x+(BitHeight/100*16), y+(BitHeight/100*-11), x+(BitHeight/100*45), y+(BitHeight/100*19));//hat
+    ellipse(x+(BitHeight/100*60), y+(BitHeight/100*20), BitHeight/100*54, BitHeight/100*31);//cap of hat
+
+fill(212, 150, 150);
+    arc(x+(BitHeight/100*62), y+(BitHeight/100*74), BitHeight/100*19,BitHeight/100* 9, -3, 183);//top lip
+    arc(x+(BitHeight/100*62), y+(BitHeight/100*72), BitHeight/100*19, BitHeight/100*9, 177, 360);//bottom lip
+stroke(0, 0, 0);
+fill(0, 0, 0);
+    line(x+(BitHeight/100*70), y+(BitHeight/100*73),  x+(BitHeight/100*54), y+(BitHeight/100*73));//middle lip
+};
+
+//Body of Bitmoji
+var drawBitmojiBody = function(x,y,BitHeight){
+fill(3, 15, 94);
+stroke(255, 255, 255);
+    quad(x+(BitHeight/100*26), y+(BitHeight/100*89), x+(BitHeight/100*4), y+(BitHeight/100*142), x+(BitHeight/100*65), y+(BitHeight/100*142), x+(BitHeight/100*58), y+(BitHeight/100*103));
+    quad(x+(BitHeight/100*102), y+(BitHeight/100*89), x+(BitHeight/100*125), y+(BitHeight/100*142), x+(BitHeight/100*68), y+(BitHeight/100*142), x+(BitHeight/100*73), y+(BitHeight/100*101));
+noStroke();
+    rect(x+(BitHeight/100*31), y+(BitHeight/100*99), BitHeight/100*68, BitHeight/100*43);
+
+textSize(BitHeight/100*34);
+fill(255, 255, 255);
+    text("AC", x+(BitHeight/100*42), y+(BitHeight/100*108), BitHeight/100*173, BitHeight/100*312);
+};
+
+var drawBitmoji = function(x,y,BitHeight){
+    drawBitmojiHead(x,y,BitHeight);
+    drawBitmojiBody(x,y,BitHeight);
+};//Alex's bitmoji
+
+var x = 100;
+var y = 100;
+var bitHeight = 100;
+    
+
+noStroke();
+    
+var drawHead = function (x, y, bitHeight)
+{
+    fill(255, 219, 172);
+    rect(x-(bitHeight/100*10), y+(bitHeight/100*36), (bitHeight/100*17), (bitHeight/100*33));//neck
+    ellipse (x,y,(bitHeight/100*80),(bitHeight/100*100)); //head
+
+    stroke(0, 0, 0);
+    fill (149, 146, 209);
+    ellipse (x+(bitHeight/100*16),y-(bitHeight/100*11),(bitHeight/100*10),(bitHeight/100*8));//right eye
+    ellipse (x-(bitHeight/100*18),y-(bitHeight/100*11),(bitHeight/100*10),(bitHeight/100*8));//left eye
+
+
+    strokeWeight((bitHeight/100*4));
+    point(x+(bitHeight/100*16), y-(bitHeight/100*11));//right puple
+    point(x-(bitHeight/100*18), y-(bitHeight/100*11));//left puple
+
+    strokeWeight(1);
+    fill(255, 255, 255);
+    arc(x,y+(bitHeight/100*19),(bitHeight/100*42),(bitHeight/100*18),0,180);//mouth
+    line(x+(bitHeight/100*20),y+(bitHeight/100*19),x-(bitHeight/100*21),y+(bitHeight/100*19)); //line for top of mouth
+
+    fill(255, 219, 172);
+    bezier(x+(bitHeight/100*1), y+(bitHeight/100*10), x-(bitHeight/100*1), y+(bitHeight/100*9), x+(bitHeight/100*22), y+(bitHeight/100*16), x-(bitHeight/100*1), y-(bitHeight/100*6));//nose
+
+    noStroke();
+    fill(133, 112, 255);
+    arc(x+(bitHeight/100*82), y+(bitHeight/100*39), (bitHeight/100*104), (bitHeight/100*100), 189, 213);//right cheek cutout
+    noStroke();
+    arc(x-(bitHeight/100*82), y+(bitHeight/100*39), (bitHeight/100*104), (bitHeight/100*100), -32, -6);//left cheek cutout
+
+    noStroke();
+    fill(90, 56, 37);
+    ellipse(x,y-(bitHeight/100*34),(bitHeight/100*81),(bitHeight/100*34));//top of hair
+    noStroke();
+    rect(x-(bitHeight/100*41),y-(bitHeight/100*36),(bitHeight/100*10),(bitHeight/100*35),(bitHeight/100*30));//left side of hair
+    rect(x+(bitHeight/100*31),y-(bitHeight/100*36),(bitHeight/100*10),(bitHeight/100*35),(bitHeight/100*30));//right side of hair
+
+    fill(0, 0, 0);
+    arc(x, y-(bitHeight/100*34), (bitHeight/100*83), (bitHeight/100*66), -182, 2);//top of hat
+
+    fill(90, 56, 37);
+    rect(x-(bitHeight/100*13), y-(bitHeight/100*48), (bitHeight/100*27), (bitHeight/100*10));//hole of hat
+};
+
+var drawBody = function (x,y,bitHeight)
+{
+    fill(82, 150, 134);
+    quad(x+(bitHeight/100*40), y+(bitHeight/100*58), x+(bitHeight/100*60), y+(bitHeight/100*130), x-(bitHeight/100*60), y+(bitHeight/100*130), x-(bitHeight/100*40), y+(bitHeight/100*58));//shirt
+
+    strokeWeight((bitHeight/100*2));
+    stroke(255, 215, 0);
+    fill(82, 150, 134);
+    arc(x, y+(bitHeight/100*59), (bitHeight/100*38), (bitHeight/100*22), 1, 180);//chain
+
+    fill(0, 0, 0);
+    textSize((bitHeight/100*36));
+    text("DT",x-(bitHeight/100*25),y+(bitHeight/100*102));
+noStroke();
+};
+
+var drawBit = function (x, y, bitHeight)
+{
+    drawHead(x,y,bitHeight);
+    drawBody(x,y,bitHeight); 
+};//Daxton's bitmoji
+
+//khan button class (start)
+var Button = function(config) {
+    this.x = config.x || 0;
+    this.y = config.y || 0;
+    this.width = config.width || 150;
+    this.height = config.height || 50;
+    this.label = config.label || "Click";
+    this.onClick = config.onClick || function() {};
+};
+
+Button.prototype.draw = function() {
+    fill(0, 234, 255);
+    rect(this.x, this.y, this.width, this.height, 5);
+    fill(0, 0, 0);
+    textSize(19);
+    textAlign(LEFT, TOP);
+    text(this.label, this.x+10, this.y+this.height/4);
+};
+
+Button.prototype.isMouseInside = function() {
+    return mouseX > this.x &&
+           mouseX < (this.x + this.width) &&
+           mouseY > this.y &&
+           mouseY < (this.y + this.height);
+};
+
+Button.prototype.handleMouseClick = function() {
+    if (this.isMouseInside()) {
+        this.onClick();
+    }
+};
+//khan button class (end)
+
+var btn1 = new Button({
+    x: 172,
+    y: 217,
+    label: "Start!",
+    width: 69,
+    onClick: function() {
+
+    }
+});
+
+var btn2 = new Button({
+    x: 145,
+    y: 279,
+    label: "How to Play",
+    width: 119,
+    onClick: function() {
+
+    }
+});
+
+
+mouseClicked = function() {
+    btn1.handleMouseClick();
+};
+
+
+var splash = function() {
+    background(133, 112, 255);
+    fill(21, 255, 0);
+    textSize(50);
+    text("Game Title", 76,81);
+    textSize(20);
+    text("By Alex Chow and Daxton Tassone", 42,95, 2030, 1000);
+    drawBitmoji(32,131,60);//alex bitmoji
+    drawBit(331,153,55);//daxton bitmoji
+    btn1.draw();
+    btn2.draw();
+};//splash screen function
+splash();
+
