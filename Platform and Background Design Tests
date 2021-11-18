@@ -1,0 +1,115 @@
+var platformTest1 = function(){ 
+fill(0, 225, 255);
+noStroke();
+rotate(-2);
+stroke(0, 0, 0);
+triangle(197, 205, 230, 202, 211, 240);
+triangle(208, 200, 168, 215, 186, 244);
+triangle(152, 192, 153, 215, 141, 257);
+triangle(187, 202, 156, 195, 143, 256);
+triangle(222, 202, 252, 195, 230, 240);
+triangle(273, 202, 247, 195, 245, 241);
+triangle(266, 198, 288, 210, 268, 243);
+triangle(222, 202, 252, 195, 230, 240);
+triangle(262, 202, 289, 204, 301, 243);
+triangle(289, 174, 285, 206, 301, 242);
+rotate(-2);
+stroke(0, 0, 0);
+//rect(145,183, 137, 34);
+quad(110, 186, 148, 215, 279, 216, 282, 184);
+triangle(109, 186, 152, 215, 133, 263);
+
+//quad(145, 184, 148, 215, 279, 216, 282, 184);
+};
+//platformTest1();
+quad(89, 183, 153, 250, 177, 209, 126, 194);
+quad(90, 184, 137, 198, 87, 218, 181, 194);
+quad(87, 219, 154, 253, 177, 209, 184, 194);
+
+//image(getImage("cute/GrassBlock"), 16, 115, 101, 71);
+var platformLog = function(){ 
+line(67, 108, 139, 109);
+line(67, 148, 139, 146);
+fill(255, 255, 255);
+ellipse(69, 128, 31, 42);
+fill(255, 255, 255);
+arc(140, 127, 24, 37, -96, 91);
+line(83, 139, 149, 139);
+line(86, 127, 150, 128);
+line(84, 119, 150, 120);
+//lines for texture
+line(64, 148, 83, 137);
+line(61, 147, 83, 133);
+line(58, 144, 84, 128);
+line(56, 140, 84, 125);
+line(56, 135, 83, 120);
+line(55, 130, 81, 116);
+line(54, 125, 78, 112);
+line(54, 121, 77, 112);
+line(55, 118, 74, 109);
+};
+//platformLog();
+
+//image(getImage("cute/BrownBlock"), 16, 239, 104, 96);
+var platformBricks = function(){ 
+fill(255, 0, 0);
+rotate(4);
+//underlayer
+rect(185, 292, 28, 20);
+rect(205, 292, 28, 20);
+rect(225, 292, 28, 20);
+rect(245, 292, 20, 20);
+rect(265, 292, 20, 20);
+//upperlayer
+rect(180, 280, 23, 20);
+rect(195, 280, 28, 20);
+rect(215, 280, 28, 20);
+rect(235, 280, 25, 20);
+rect(255, 280, 22, 20);
+rect(275, 280, 22, 20);
+};
+//platformBricks();
+
+//image(getImage("cute/TreeTall"), 16, 239, 76, 137);
+/*var backgroundBuilding = function (){
+fill(255, 0, 0);
+rect(140, 94, 52, 75);
+rect(136, 81, 3, 87);
+rotate(-6);
+rect(128, 94, 53, 26);
+
+rotate(3.4);
+rect(186, 84, 3, 94);
+rotate(1);
+fill(222, 212, 255);
+rect(145, 115, 31, 22);
+rect(145, 144, 31, 22);
+};*/
+//backgroundBuilding();
+var backgroundBuilding = function (){
+fill(10, 10, 10);
+//noStroke();
+strokeWeight(0.5);
+rotate(-3.1);
+//rect(178, 187, 23, 157);
+quad(197, 332, 180, 344, 179, 197, 204, 187);
+stroke(255, 255, 255);
+strokeWeight(0.5);
+rotate(3.1);
+rect(137, 184, 61, 150);
+//rotate(-6);
+//rect(137, 158, 55, 26);
+quad(200, 183, 136, 184, 160, 175, 212, 176);
+
+//rotate(1);
+fill(217, 255, 0);
+rect(145, 189, 19, 22);
+rect(145, 224, 19, 22);
+rect(145, 260, 19, 22);
+rect(170, 189, 19, 22);
+rect(170, 224, 19, 22);
+rect(170, 260, 19, 22);
+fill(179, 7, 7);
+rect(142, 294, 50, 33);
+};
+//backgroundBuilding();
