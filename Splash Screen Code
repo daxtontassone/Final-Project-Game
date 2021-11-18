@@ -199,11 +199,11 @@ var splash = function() {
     background(133, 112, 255);
     fill(21, 255, 0);
     textSize(50);
-    text("Game Title", 76,81);
+    text("Game Title", 80,103);
     textSize(20);
-    text("By Alex Chow and Daxton Tassone", 42,95, 2030, 1000);
-    drawBitmoji(32,131,60);//alex bitmoji
-    drawBit(331,153,55);//daxton bitmoji
+    text("By Alex Chow and Daxton Tassone", 42,132, 2030, 1000);
+    drawBitmoji(32,191,60);//alex bitmoji
+    drawBit(331,207,55);//daxton bitmoji
     btn1.draw();
     btn2.draw();
 };//splash screen function
