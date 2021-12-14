@@ -1,0 +1,45 @@
+var draw = function() {
+    background(194, 255, 222);
+    var t = 1;
+    var x = t+cos(millis()+2); 
+    var y = t+cos(millis()+1);
+
+ellipse(93, 144, 4, 7);
+bezier(95, 119, 87, 151, 101, 149, 102, 115);
+
+ellipse(100, 119, 14, 8);
+//right hand
+bezier(x*1.5+128, 120, x*1.5+130, 168, x*1.5+125, 134, x*1.5+117, 115);
+//right arm
+ellipse(x*1.5+128, 144, 4, 7);
+//right shoulder
+ellipse(x*1.5+122, 119, 14, 8);
+
+
+bezier(x*5+105, 157, x*5+91, 193, x*5+99, 147, x*5+103, 158);
+//left foot
+ellipse(x*5+101, 173, 8, 6);
+
+//left leg
+ellipse(x*5+103, 155, 6, 13);
+
+bezier(y*-7+119, 154, y*-8+109, 170, y*-8+110, 182, y*-8+122, 156);
+//right foot
+ellipse(y*-7+115, 173, 9, 6);
+
+//right leg
+ellipse(y*-7+119, 155, 6, 13);
+//hip
+rect(x*1.5+99, 135, 20, 17, 20);
+//body
+rect(x*1.5+98, 110, 22, 36,10);
+noStroke();
+//neckish
+rect(x*1.5+102, 101, 14, 20);
+stroke(0, 0, 0);
+//head
+ellipse(x*1.5+109,98,40,40);
+
+
+};
+
